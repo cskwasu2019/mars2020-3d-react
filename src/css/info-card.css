@@ -1,0 +1,16 @@
+.info-card {
+  @apply block w-max p-2 absolute left-1 top-1 font-bebas-neue uppercase max-w-sm text-gray-600 pointer-events-none text-xs lg:p-2 lg:text-base lg:bg-white lg:bg-opacity-70 lg:text-gray-700 rounded lg:left-4 lg:top-4 lg:rounded-md lg:shadow-lg;
+
+  & li {
+    @apply flex items-center gap-1 mb-1;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 0.5rem;
+      height: 0.5rem;
+      background: theme('colors.primary.darker');
+      border-radius: 50%;
+    }
+  }
+}

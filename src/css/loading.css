@@ -1,0 +1,16 @@
+@keyframes anim-loading {
+  to {
+    stroke-dashoffset: 100%;
+  }
+}
+
+.loading {
+  & svg {
+    @apply mt-1;
+    & line {
+      stroke: theme('colors.primary.DEFAULT');
+      stroke-width: 0.2rem;
+      animation: anim-loading 1s linear infinite;
+    }
+  }
+}

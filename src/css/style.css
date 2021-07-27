@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&family=Nunito&family=Roboto&display=swap');
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.error-bg-color {
+  @apply bg-red-500 !important;
+}
+
+.swal-content-small {
+  @apply text-sm text-justify !important;
+}

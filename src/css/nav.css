@@ -1,0 +1,45 @@
+header {
+  @apply bg-gray-700 text-primary-dark px-3 py-3 lg:w-3/12 lg:px-0 font-nunito-sans;
+
+  & > div {
+    @apply container mx-auto flex uppercase justify-between items-center lg:flex-col lg:items-stretch lg:h-full;
+
+    & h1 {
+      @apply font-bold lg:px-4 lg:mb-2 lg:border-b lg:border-gray-600;
+    }
+
+    & nav {
+      @apply flex gap-2 text-xs lg:flex-col lg:text-right lg:gap-0;
+    }
+  }
+}
+
+nav {
+  & a {
+    @apply ml-2 font-roboto lg:p-2 lg:ml-6 lg:rounded-tl lg:rounded-bl lg:text-base;
+    display: block;
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      background: theme('colors.primary.dark');
+      width: 0;
+      height: 0.15rem;
+      position: absolute;
+      left: 5%;
+      bottom: -0.2rem;
+      transition: width 0.3s ease-in-out;
+
+      @apply lg:hidden;
+    }
+
+    &.active {
+      @apply lg:bg-primary-dark lg:text-gray-700 font-bold;
+    }
+
+    &.active::after {
+      width: 90%;
+    }
+  }
+}
