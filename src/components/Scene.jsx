@@ -58,7 +58,9 @@ const Scene = ({ children }) => {
     if (modelWiki) {
       const wiki = modelWiki
       const date = new Date(
-        wiki.infobox.find((info) => info[0] === 'Landing date')[1]
+        wiki.infobox
+          .find((info) => info[0] === 'Deployed')[1]
+          .replace(/^(.*?)UTC.*$/, '$1UTC')
       )
 
       const intervalID = setInterval(() => {
@@ -303,12 +305,11 @@ function generateCubemapTexture(color) {
 
 const VISIBLE_INFO = [
   'Dimensions',
-  'Diameter',
-  'Length',
-  'Height',
+  'Dry mass',
   'Power',
-  'Launch mass',
-  'Landing mass',
+  'Deployed',
+  'Location',
+  'Travelled',
 ]
 
 export default Scene
